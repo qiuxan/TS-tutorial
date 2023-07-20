@@ -46,13 +46,21 @@
 
 // let getDistance = (pointA: Point, pointB: Point) => {};
 
+// class Point {
+//   private x: number | undefined;
+//   y: number | undefined;
+//   constructor(x?: number, y?: number) {
+//     this.x = x;
+//     this.y = y;
+//   }
+//   public draw() {
+//     console.log("x:" + this.x, "y:" + this.y);
+//   }
+//   // getDistance(another: Point) {}
+// }
+
 class Point {
-  private x: number | undefined;
-  y: number | undefined;
-  constructor(x?: number, y?: number) {
-    this.x = x;
-    this.y = y;
-  }
+  constructor(private x?: number, private y?: number) {} // a lot less code
   public draw() {
     console.log("x:" + this.x, "y:" + this.y);
   }
