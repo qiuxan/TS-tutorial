@@ -47,15 +47,19 @@
 // let getDistance = (pointA: Point, pointB: Point) => {};
 
 class Point {
-  x: number;
-  y: number;
-  draw() {
+  private x: number | undefined;
+  y: number | undefined;
+  constructor(x?: number, y?: number) {
+    this.x = x;
+    this.y = y;
+  }
+  public draw() {
     console.log("x:" + this.x, "y:" + this.y);
   }
   // getDistance(another: Point) {}
 }
 
-let point = new Point();
-point.x = 1;
-point.y = 2;
+let point = new Point(1, 2);
+// point.x = 1;
+// point.y = 2; // cannot do it when it is private
 point.draw();
