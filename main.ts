@@ -36,13 +36,17 @@
 // solve the issue but what if we have a,b,c,d,e,f,g as parameter?  and also we might have to do it everytime:
 
 // final solution:
-
-interface Point {
+class Point {
   x: number;
   y: number;
+  draw() {}
+  getDistance(another: Point) {}
 }
-let drawPoint = (point: Point) => {
-  console.log(point.x);
-  console.log(point.y);
-};
+// let drawPoint = (point: Point) => {
+//   console.log(point.x);
+//   console.log(point.y);
+// };
 
+// //example  Class:
+
+// let getDistance = (pointA: Point, pointB: Point) => {};
