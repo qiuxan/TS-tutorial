@@ -35,13 +35,8 @@
 
 // solve the issue but what if we have a,b,c,d,e,f,g as parameter?  and also we might have to do it everytime:
 
-// final solution:
-class Point {
-  x: number;
-  y: number;
-  draw() {}
-  getDistance(another: Point) {}
-}
+// final solution
+
 // let drawPoint = (point: Point) => {
 //   console.log(point.x);
 //   console.log(point.y);
@@ -50,3 +45,17 @@ class Point {
 // //example  Class:
 
 // let getDistance = (pointA: Point, pointB: Point) => {};
+
+class Point {
+  x: number;
+  y: number;
+  draw() {
+    console.log("x:" + this.x, "y:" + this.y);
+  }
+  // getDistance(another: Point) {}
+}
+
+let point = new Point();
+point.x = 1;
+point.y = 2;
+point.draw();

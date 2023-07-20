@@ -1,13 +1,46 @@
-var Color;
-(function (Color) {
-    Color[Color["red"] = 0] = "red";
-    Color[Color["green"] = 1] = "green";
-    Color[Color["blue"] = 2] = "blue";
-})(Color || (Color = {}));
-// same with
-var Color2 = {
-    red: 0,
-    green: 1,
-    blue: 2,
-};
-var backGroundColor = Color.green;
+// enum Color {
+//   red,
+//   green,
+//   blue,
+// }
+// // same with
+// let Color2 = {
+//   red: 0,
+//   green: 1,
+//   blue: 2,
+// };
+// let backGroundColor = Color.green;
+// let message = "abe";
+// let endsWithC = message.endsWith("c");
+// let message2;
+// message2 = "abc";
+// let endsWithC2 = (<string>message).endsWith("c");
+// let endsWithC2AlternativeWay = (message as string).endsWith("c");
+// let drawPoint = (x, y, a, b, c, d, e, f, g, h) => {}; //xxxx not good
+// let drawPoint = (point) => {};
+// drawPoint({ x: 1, y: 2 });
+// //looks good but what if:
+// drawPoint({ name: "ian" }); // it will break the code
+// solution:
+// let drawPoint = (point: { x: number; y: number }) => {};
+// solve the issue but what if we have a,b,c,d,e,f,g as parameter?  and also we might have to do it everytime:
+// final solution
+// let drawPoint = (point: Point) => {
+//   console.log(point.x);
+//   console.log(point.y);
+// };
+// //example  Class:
+// let getDistance = (pointA: Point, pointB: Point) => {};
+var Point = /** @class */ (function () {
+    function Point() {
+    }
+    Point.prototype.draw = function () {
+        console.log("x:" + this.x, "y:" + this.y);
+    };
+    Point.prototype.getDistance = function (another) { };
+    return Point;
+}());
+var point = new Point();
+point.x = 1;
+point.y = 2;
+point.draw();
