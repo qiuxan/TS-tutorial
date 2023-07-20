@@ -1,5 +1,14 @@
-function log(messager) {
-  console.log(messager);
+enum Color {
+  red,
+  green,
+  blue,
 }
-var message = "hello world";
-log(message);
+
+// same with
+let Color2 = {
+  red: 0,
+  green: 1,
+  blue: 2,
+};
+
+let backGroundColor = Color.green;
